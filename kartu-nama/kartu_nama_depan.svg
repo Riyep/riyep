@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1063 650" width="1063" height="650" style="background:#06050D; font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Brand Gradients -->
+    <linearGradient id="rypGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9EBBFF"/>
+      <stop offset="50%" stop-color="#506FFF"/>
+      <stop offset="100%" stop-color="#4000FF"/>
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.6"/>
+      <stop offset="35%" stop-color="#252A4A" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#506FFF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#181B2C" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#DCE7FE"/>
+    </linearGradient>
+
+    <linearGradient id="cyanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#506FFF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="auroraTopRight" cx="85%" cy="15%" r="60%">
+      <stop offset="0%" stop-color="#506FFF" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#4000FF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#06050D" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="auroraBottomLeft" cx="15%" cy="85%" r="55%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.16"/>
+      <stop offset="60%" stop-color="#506FFF" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#06050D" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Dot Pattern -->
+    <pattern id="dotGrid" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#506FFF" fill-opacity="0.15"/>
+    </pattern>
+
+    <clipPath id="cardClip">
+      <rect x="0" y="0" width="1063" height="650" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <!-- MASTER FRONT CARD FRAME -->
+  <g id="FRONT_CARD_1063x650_300DPI" clip-path="url(#cardClip)">
+    <!-- Base Background -->
+    <rect id="bg_base" width="1063" height="650" fill="#06050D"/>
+    <rect id="bg_aurora_tr" width="1063" height="650" fill="url(#auroraTopRight)"/>
+    <rect id="bg_aurora_bl" width="1063" height="650" fill="url(#auroraBottomLeft)"/>
+    <rect id="bg_dots" width="1063" height="650" fill="url(#dotGrid)"/>
+
+    <!-- Subtle Tech Circuit Lines -->
+    <g id="decorative_circuits" opacity="0.25">
+      <line x1="80" y1="40" x2="250" y2="40" stroke="#60A5FA" stroke-width="1"/>
+      <line x1="250" y1="40" x2="270" y2="60" stroke="#60A5FA" stroke-width="1"/>
+      <circle cx="270" cy="60" r="2.5" fill="#60A5FA"/>
+
+      <line x1="983" y1="590" x2="820" y2="590" stroke="#506FFF" stroke-width="1"/>
+      <line x1="820" y1="590" x2="800" y2="570" stroke="#506FFF" stroke-width="1"/>
+      <circle cx="800" cy="570" r="2.5" fill="#506FFF"/>
+    </g>
+
+    <!-- Inner Metallic Card Border -->
+    <rect id="card_border" x="20" y="20" width="1023" height="610" rx="20" fill="none" stroke="url(#borderGrad)" stroke-width="1.5"/>
+
+    <!-- Corner Target Crosshairs -->
+    <g id="corner_crosshairs" opacity="0.4" stroke="#60A5FA" stroke-width="1.2">
+      <path d="M40 32v16 M32 40h16"/>
+      <path d="M1023 32v16 M1015 40h16"/>
+      <path d="M40 602v16 M32 610h16"/>
+      <path d="M1023 602v16 M1015 610h16"/>
+    </g>
+
+    <!-- ============================================== -->
+    <!-- HEADER SECTION: Logo, Brand & Availability Pill -->
+    <!-- ============================================== -->
+    <g id="Header_Identity" transform="translate(60, 52)">
+      <!-- Mini Vector Logo -->
+      <g id="Brand_Logo" transform="translate(0, 4) scale(0.20)">
+        <path d="M118.705 27L138.203 27.45L165.851 29.7125H243.796V40.5868L236.096 41.499L228.847 44.2115L225.672 46.9362L223.409 51.9232L222.497 56.4603V75.0341L224.31 94.5202L226.122 102.682L228.847 110.394L232.021 116.731L236.546 123.53L244.258 131.692L249.695 136.217L258.307 142.116L266.006 146.191L274.618 141.666L284.142 134.867L295.467 123.53L302.716 111.744L306.341 101.32L308.153 93.17L309.516 75.4842V56.9103L308.616 51.9232L306.803 47.8484L303.178 44.2115L295.917 41.499L288.217 40.1367L288.667 29.7125H368.436L390.647 27.45L411.495 27L421.47 27.9001L430.081 29.7125L438.693 32.8872L447.755 37.8743L451.38 40.5868L459.542 49.6608L463.616 56.9103L466.329 64.6099L469.054 79.1211V97.2449L467.691 106.307L464.066 118.543L460.442 125.793L455.455 133.055L447.293 141.204L442.768 144.379L434.156 148.916L423.732 152.091L411.045 153.903H400.159L391.097 152.541L387.472 151.628L387.022 150.728L389.285 140.304L396.534 141.204H406.508L416.482 138.942L425.544 133.955L430.982 128.517L436.419 119.456L438.693 113.106L440.506 104.944L441.406 95.8825V82.2836L439.143 65.5222L434.606 54.1857L427.807 46.9362L425.094 45.1238L418.745 42.3991L409.683 40.5868H395.172L384.748 42.3991L377.048 46.036L373.423 49.6608L371.611 53.2856L370.699 57.8104L371.161 199.675L372.973 203.749L377.498 207.374L382.035 208.737L401.071 210.549L401.521 220.973H324.027V210.999L333.539 209.649L339.426 207.836L343.513 203.749L345.325 196.95L345.775 58.2726L344.413 49.1986L342.601 46.036L340.338 44.2115H338.976L336.714 46.4861L335.351 49.6608L334.451 55.548L333.989 77.3087L332.627 87.7329L327.189 107.669L321.752 119.006L314.503 129.88L303.178 141.666L291.392 150.266L280.505 155.715L278.243 157.528V191.063L279.605 201.487L280.505 203.299L285.493 207.374L290.03 208.737L304.079 210.549V220.523L228.397 220.973L227.934 210.549L236.996 209.649L246.52 207.374L250.595 204.212L252.408 201.037L253.77 193.325V157.065L238.359 148.916L225.672 138.942L216.61 128.968L208.898 116.731L203.911 105.407L200.286 92.2578L198.024 77.3087L197.574 52.3733L195.762 46.4861L193.037 43.7615L190.324 45.1238L188.512 47.3862L186.7 53.7356V195.6L188.05 202.387L189.412 205.112L191.675 207.374L194.399 208.737L198.936 209.649L207.998 210.549V220.973H130.492L130.942 210.549L149.978 208.737L154.515 207.374L159.052 203.749L160.864 199.225L161.314 60.5351L159.952 54.1857L157.689 50.1109L154.515 46.9362L149.078 43.7615L143.178 41.9491L134.579 40.5868H119.617L108.743 42.8613L101.944 46.036L98.769 48.2985L91.5194 56.4603L87.8947 64.6099L86.0823 73.2217L85.6201 86.8206L86.5324 94.9824L89.2449 104.944L91.9695 110.844L95.5943 116.281L100.581 121.718L106.018 125.793L113.268 128.968L117.805 129.88H131.854L137.291 141.204L29.8743 261.77L28.5119 263.12L27.1618 262.67L19 256.333L103.756 140.304L102.844 138.942L96.9566 137.129L88.7948 133.055L80.633 127.605L70.671 117.643L63.8716 107.219L59.3345 95.8825L57.5222 84.096L57.9722 72.7717L60.6969 61.8974L65.2339 52.8233L70.2088 46.4861L75.6581 41.499L83.8077 36.0619L98.769 30.1625L109.193 27.9001L118.255 27.45L118.705 27Z" fill="url(#rypGradient)"/>
+      </g>
+      
+      <!-- Studio Tag -->
+      <g id="Brand_Titles" transform="translate(115, 12)">
+        <text id="brand_riyep" x="0" y="16" fill="#FFFFFF" font-size="24" font-weight="900" letter-spacing="3">RIYEP</text>
+        <text id="brand_sub" x="0" y="34" fill="#60A5FA" font-size="10.5" font-weight="700" letter-spacing="2" font-family="'Fira Code', monospace">DEV // TECH LAB</text>
+      </g>
+
+      <!-- Availability Status Badge -->
+      <g id="Status_Badge" transform="translate(680, 6)">
+        <rect x="0" y="0" width="240" height="38" rx="19" fill="#0B1A1B" stroke="#10B981" stroke-opacity="0.4" stroke-width="1.2"/>
+        <circle cx="22" cy="19" r="4.5" fill="#10B981"/>
+        <circle cx="22" cy="19" r="8" fill="#10B981" fill-opacity="0.25"/>
+        <text x="38" y="23" fill="#34D399" font-size="10.5" font-weight="700" letter-spacing="1.5">AVAILABLE FOR WORK</text>
+      </g>
+    </g>
+
+    <!-- ============================================== -->
+    <!-- MAIN HERO SECTION: Name & Professional Titles  -->
+    <!-- ============================================== -->
+    <g id="Personal_Identity" transform="translate(60, 185)">
+      <!-- Name -->
+      <text id="FullName" x="0" y="60" fill="url(#textGrad)" font-size="52" font-weight="900" letter-spacing="0.5">RIO MARCELLINO</text>
+      
+      <!-- Roles -->
+      <g id="Roles_Container" transform="translate(0, 102)">
+        <text id="Role_Software" x="0" y="0" fill="#60A5FA" font-size="20" font-weight="700" letter-spacing="1.5">SOFTWARE ENGINEER</text>
+        <circle cx="248" cy="-6" r="3" fill="#506FFF"/>
+        <text id="Role_Network" x="265" y="0" fill="#A78BFA" font-size="20" font-weight="700" letter-spacing="1.5">NETWORK ENGINEER</text>
+        <circle cx="510" cy="-6" r="3" fill="#506FFF"/>
+        <text id="Role_IT" x="527" y="0" fill="#60A5FA" font-size="20" font-weight="700" letter-spacing="1.5">IT SPECIALIST</text>
+      </g>
+
+      <!-- Scope Description -->
+      <text id="Core_Competency" x="0" y="136" fill="#94A3B8" font-size="14.5" font-weight="400" letter-spacing="0.4">
+        Full-Stack Web • Mesin Kasir POS • Mini ERP • Bot Telegram Otomasi • Infrastruktur Jaringan
+      </text>
+
+      <!-- Accent Divider Line -->
+      <rect id="divider" x="0" y="165" width="943" height="1.5" fill="url(#cyanLine)"/>
+    </g>
+
+    <!-- ============================================== -->
+    <!-- CONTACT MATRIX: WhatsApp, Email, Web, Location -->
+    <!-- ============================================== -->
+    <g id="Contact_Information" transform="translate(60, 400)">
+      <!-- Item 1: WhatsApp -->
+      <g id="contact_whatsapp" transform="translate(0, 0)">
+        <rect x="0" y="0" width="295" height="74" rx="14" fill="#0C0E1C" stroke="#232742" stroke-width="1"/>
+        <!-- WA Icon -->
+        <g transform="translate(18, 20)">
+          <rect x="0" y="0" width="34" height="34" rx="9" fill="#10B981" fill-opacity="0.12"/>
+          <path d="M17 9.5a7.5 7.5 0 0 0-6.5 11.2L9.5 24.5l3.9-1a7.5 7.5 0 1 0 3.6-14zm0 13.6a6.1 6.1 0 0 1-3.1-.9l-.2-.1-2.3.6.6-2.3-.1-.2a6.1 6.1 0 1 1 5.1 2.9z" fill="#10B981"/>
+        </g>
+        <text x="64" y="28" fill="#64748B" font-size="10.5" font-weight="700" letter-spacing="1.5">WHATSAPP // DIRECT</text>
+        <text x="64" y="51" fill="#F1F5F9" font-size="15" font-weight="700" font-family="'Fira Code', monospace">+62 896-7760-2300</text>
+      </g>
+
+      <!-- Item 2: Email -->
+      <g id="contact_email" transform="translate(324, 0)">
+        <rect x="0" y="0" width="295" height="74" rx="14" fill="#0C0E1C" stroke="#232742" stroke-width="1"/>
+        <!-- Mail Icon -->
+        <g transform="translate(18, 20)">
+          <rect x="0" y="0" width="34" height="34" rx="9" fill="#60A5FA" fill-opacity="0.12"/>
+          <path d="M10 12.5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-10a2 2 0 0 1 2-2zm0 2l7 4.5 7-4.5" fill="none" stroke="#60A5FA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <text x="64" y="28" fill="#64748B" font-size="10.5" font-weight="700" letter-spacing="1.5">OFFICIAL EMAIL</text>
+        <text x="64" y="51" fill="#F1F5F9" font-size="15" font-weight="700" font-family="'Fira Code', monospace">riyepdev@gmail.com</text>
+      </g>
+
+      <!-- Item 3: Website -->
+      <g id="contact_website" transform="translate(648, 0)">
+        <rect x="0" y="0" width="295" height="74" rx="14" fill="#0C0E1C" stroke="#232742" stroke-width="1"/>
+        <!-- Globe Icon -->
+        <g transform="translate(18, 20)">
+          <rect x="0" y="0" width="34" height="34" rx="9" fill="#A78BFA" fill-opacity="0.12"/>
+          <circle cx="17" cy="17" r="7.5" fill="none" stroke="#A78BFA" stroke-width="1.6"/>
+          <ellipse cx="17" cy="17" rx="3.5" ry="7.5" fill="none" stroke="#A78BFA" stroke-width="1.4"/>
+          <line x1="9.5" y1="17" x2="24.5" y2="17" stroke="#A78BFA" stroke-width="1.4"/>
+        </g>
+        <text x="64" y="28" fill="#64748B" font-size="10.5" font-weight="700" letter-spacing="1.5">PORTFOLIO DOMAIN</text>
+        <text x="64" y="51" fill="#F1F5F9" font-size="15" font-weight="700" font-family="'Fira Code', monospace">www.riyep.com</text>
+      </g>
+
+      <!-- Row 2: Location & GitHub / Social -->
+      <g id="contact_row2" transform="translate(0, 96)">
+        <!-- Location -->
+        <g id="contact_location" transform="translate(0, 0)">
+          <circle cx="8" cy="12" r="3" fill="#F87171"/>
+          <text x="20" y="16" fill="#94A3B8" font-size="13.5" font-weight="500">
+            <tspan fill="#64748B">Location:</tspan> Surabaya, Jawa Timur, Indonesia
+          </text>
+        </g>
+
+        <!-- GitHub & Social -->
+        <g id="contact_github" transform="translate(420, 0)">
+          <text x="0" y="16" fill="#94A3B8" font-size="13.5" font-weight="500">
+            <tspan fill="#64748B">GitHub:</tspan> github.com/Riyep <tspan fill="#475569" dx="10">|</tspan> <tspan fill="#64748B" dx="10">Instagram:</tspan> @ri.yep
+          </text>
+        </g>
+
+        <!-- Spec Marker -->
+        <g id="spec_marker" transform="translate(815, 0)">
+          <text x="0" y="16" fill="#475569" font-size="11.5" font-family="'Fira Code', monospace">1063x650 // 300 DPI</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

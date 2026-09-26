@@ -5,10 +5,21 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 const projectImages = import.meta.glob('../images/*.jpg', { eager: true, import: 'default' });
 const getImg = (name) => projectImages[`../images/${name}.jpg`] || '';
 
+const filterCategories = [
+  { id: 'all', label: 'All Projects' },
+  { id: 'web', label: 'Web Applications' },
+  { id: 'erp', label: 'POS & ERP Systems' },
+  { id: 'bot', label: 'Bot Automation' },
+  { id: 'network', label: 'Network & Infra' },
+];
+
 const projects = [
   {
     id: 1,
     title: 'Bakule Lele – Web Pemesanan & Distribusi Lele Segar Surabaya',
+    category: 'Web App',
+    categoryGroup: 'web',
+    accent: '#60a5fa',
     desc: 'Platform pemesanan dan distribusi lele segar Surabaya dengan kalkulator order otomatis dan gateway pembayaran QRIS Tripay.',
     about: 'Platform web pemesanan lele segar berbasis di Surabaya yang menghubungkan peternak langsung dengan pelaku usaha kuliner (warung pecel lele, restoran, katering) serta kebutuhan rumah tangga. Dilengkapi sistem kalkulasi otomatis, integrasi gateway pembayaran QRIS via Tripay, dan penerusan pesanan instan ke WhatsApp.',
     images: [getImg('project_1a'), getImg('project_1b'), getImg('project_1c')],
@@ -36,6 +47,9 @@ const projects = [
   {
     id: 2,
     title: 'Kyuka Ramen – Web Experience Restoran Ramen Halal Bergaya Fukuoka & Retro Arcade',
+    category: 'Web App',
+    categoryGroup: 'web',
+    accent: '#a78bfa',
     desc: 'Platform web restoran ramen otentik bergaya retro Japanese arcade & cyberpunk dengan menu tematik dan reservasi WhatsApp.',
     about: 'Kyuka Ramen adalah platform web modern bertema retro Japanese arcade untuk jaringan restoran ramen otentik khas Fukuoka di Indonesia. Mengusung komitmen 100% Halal (No Pork, No Lard, No Mirin), website ini memadukan nuansa visual cyberpunk dan pixel art interaktif dengan fungsi penjelajahan menu eksklusif serta sistem pencarian cabang dan reservasi meja terintegrasi langsung ke WhatsApp.',
     images: [getImg('project_2a'), getImg('project_2b'), getImg('project_2c')],
@@ -64,129 +78,127 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Kopi Toko Djawa – Website Profil & Katalog Menu Digital Kedai Kopi Klasik Nusantara',
-    desc: 'Website profil bernuansa nostalgia heritage untuk kedai kopi legendaris asal Braga Bandung dengan katalog menu digital dan locator cabang.',
-    about: 'Website resmi dan portal informasi digital untuk Kopi Toko Djawa, kedai kopi bernuansa retro klasik yang bermula dari Jalan Braga, Bandung, dan kini melayani pelanggan di Bandung, Jakarta, serta Surabaya. Platform ini dirancang dengan gaya visual nostalgia yang hangat, memudahkan pelanggan menjelajahi menu signature, menemukan titik lokasi gerai terdekat, dan terhubung langsung untuk reservasi maupun pemesanan via WhatsApp.',
+    title: 'Veloce Auto Care – Landing Page & Sistem Booking Salon Mobil Mewah Surabaya',
+    category: 'Web App',
+    categoryGroup: 'web',
+    accent: '#22d3ee',
+    desc: 'Landing page premium automotive detailing studio Surabaya dengan kalkulator estimasi biaya instan dan booking WhatsApp otomatis.',
+    about: 'Veloce Auto Care adalah landing page interaktif bertema automotive modern untuk studio premium auto detailing, paint protection film (PPF), dan nano ceramic coating di Surabaya. Menghadirkan identitas visual maskulin nan elegan yang dirancang untuk menarik pemilik mobil mewah dan sports car, dilengkapi kalkulator estimasi biaya perawatan instan dan alur booking langsung ke WhatsApp.',
     images: [getImg('project_3a'), getImg('project_3b'), getImg('project_3c')],
     features: [
-      'Identitas Visual Nostalgia & Heritage: Desain bertema vintage dengan palet warna merah marun (#c5161d), krem hangat, serta tipografi klasik kombinasi Playfair dan Inter.',
-      'Katalog Menu Interaktif: Filter kategori sajian kopi dan kudapan (Coffee, Fruit Coffee, Non-Coffee, Cookies) lengkap dengan label produk unggulan (Best Seller, Signature).',
-      'Direktori Cabang Multi-Kota: Informasi lokasi cabang di kota-kota utama (Bandung, Jakarta, Surabaya) disertai jam operasional dan tautan peta.',
-      'Direct WhatsApp Integration: Tombol mengambang (floating button) untuk kemudahan konsultasi, pemesanan, atau pertanyaan pelanggan secara langsung.',
-      'Optimasi SEO & Rich Snippets: Didukung implementasi Schema.org (JSON-LD Local Business & CoffeeShop) serta Open Graph untuk visibilitas optimal di mesin pencari.',
-      'Arsitektur Cepat & Responsif: Dibangun sebagai Single Page Application yang ringan, cepat dimuat, dan nyaman diakses melalui smartphone.',
+      'Visual Identitas Premium Auto-Studio: Palet warna dark luxury (deep charcoal, chrome silver, dynamic amber gold glow) dengan tipografi tegas modern.',
+      'Interactive Detailing Cost Calculator: Pengunjung dapat memilih ukuran kendaraan (Small, Medium, Large, Luxury/SUV) serta paket perawatan (Express, Full Polish, Nano Ceramic Coating, Ultimate PPF) untuk melihat estimasi biaya dan durasi pengerjaan seketika.',
+      'Direct-to-WhatsApp Booking Engine: Mengonversi formulir kalkulasi menjadi pesan WhatsApp reservasi otomatis yang siap kirim ke customer service.',
+      'Galeri Sebelum & Sesudah (Before/After): Showcase hasil pengerjaan proteksi cat mobil beresolusi tinggi.',
+      'Akses Cepat & SEO Ramah Mesin Pencari: Struktur kode bersih dengan performa skor tinggi di perangkat mobile.',
     ],
     tech: [
       'React 19',
-      'JavaScript (ES6+)',
       'Vite',
-      'CSS3 Custom Properties',
-      'Responsive Media Queries',
-      'Google Fonts (Playfair, Inter)',
-      'Schema.org JSON-LD',
-      'Open Graph Protocol',
-      'WhatsApp Click-to-Chat API',
+      'Modern CSS3 Grid & Flexbox',
+      'Lucide Icons / Feather Icons',
+      'CSS Custom Properties',
+      'WhatsApp Link Generator API',
+      'Google Fonts (Outfit & Syne)',
       'Vercel',
     ],
-    demoUrl: 'https://kopi-toko-djawa.vercel.app/',
+    demoUrl: 'https://veloce-autocare.vercel.app/',
     repoUrl: null,
   },
   {
     id: 4,
-    title: 'Surabaya Ink Well – Website Profil & Sistem Booking Studio Tato Kustom Surabaya',
-    desc: 'Platform reservasi studio tato kustom dengan estetika monokrom gothic, panduan penempatan anatomi, dan pemesanan home service.',
-    about: 'Website profil resmi dan platform reservasi digital untuk Surabaya Ink Well, studio seni tato kustom profesional di Surabaya. Mengusung estetika visual monokrom gelap (dark gothic & anatomical sketch), website ini dirancang untuk memamerkan portofolio karya seni rajah tubuh, panduan penempatan tato (Tattoo Placement Guide), konsultasi desain, serta sistem pemesanan janji temu studio maupun layanan panggilan (home service).',
+    title: 'Rio Marcellino Portfolio – Developer Portfolio & Digital Services Showcase',
+    category: 'Web App',
+    categoryGroup: 'web',
+    accent: '#34d399',
+    desc: 'Website portofolio developer modern bertema cosmic glassmorphism dengan background aurora borealis kanvas dan showcase proyek interaktif.',
+    about: 'Website portofolio personal dan showcase jasa profesional milik Rio Marcellino (Riyep). Menampilkan estetika cosmic dark theme dengan latar belakang aurora borealis dinamis berbasis HTML5 Canvas, animasi tabur bintang (twinkling & shooting stars), serta presentasi terperinci mengenai proyek rekayasa perangkat lunak, keahlian infrastruktur IT, pengalaman karier, dan saluran kontak interaktif.',
     images: [getImg('project_4a'), getImg('project_4b'), getImg('project_4c')],
     features: [
-      'Desain Monokrom Dark Aesthetic: Tampilan visual bernuansa gelap elegan dengan fotografi hitam-putih kontras tinggi, aksen stempel emas, serta tipografi tegas Oswald dan Source Sans 3.',
-      'Interactive Tattoo Placement Guide: Panduan visual interaktif untuk area penempatan tato tubuh (Head, Chest, Back, Arm, Leg) lengkap dengan ilustrasi sketsa anatomi tubuh.',
-      'Dual Appointment Booking System: Sistem pemesanan janji temu fleksibel yang memfasilitasi sesi tato di studio (In-Studio Booking) maupun panggilan artis tato ke lokasi pelanggan (Call Artist to Place).',
-      'Direct WhatsApp Consultation & Booking: Integrasi pemesanan langsung ke nomor resmi artis tato via WhatsApp untuk konsultasi konsep, ukuran, dan estimasi pengerjaan.',
-      'Optimasi SEO & Schema TattooParlor: Penerapan metadata terstruktur Schema.org (Local Business - TattooParlor) dan Open Graph untuk visibilitas lokal di Surabaya dan Jawa Timur.',
-      'Desain Responsif & Mobile-Friendly: Antarmuka ringan dan adaptif untuk pengalaman browsing portofolio tato yang mulus di perangkat smartphone.',
+      'Dynamic Aurora Borealis Canvas: Efek pencahayaan aurora dinamis di latar belakang yang berotasi dan berbaur secara acak dengan HSL color cycling.',
+      'Cosmic Starfield Particle System: Taburan bintang berkelap-kelip dengan meteor/shooting stars acak yang dibangun menggunakan Canvas API murni tanpa beban library eksternal.',
+      'Interactive Detail Store Modal: Setiap kartu proyek dapat dibuka menjadi modal penjelajahan mendalam lengkap dengan multi-image slider, rincian arsitektur, dan tautan live demo.',
+      'Bilingual Toggle & Timeline Accordion: Riwayat pengalaman kerja dengan filter bahasa serta sistem expand/collapse interaktif.',
+      'Desain Responsif Penuh (Mobile-First): Transisi halus di semua ukuran layar smartphone, tablet, hingga monitor desktop ultra-wide.',
     ],
     tech: [
-      'Semantic HTML5',
-      'Modern CSS3',
-      'JavaScript (ES6+)',
-      'Parallax Scrolling',
-      'Custom Dark Theme',
-      'Google Fonts (Oswald, Source Sans 3)',
-      'Schema.org JSON-LD (TattooParlor)',
-      'Open Graph Protocol',
-      'WhatsApp Click-to-Chat API',
-      'Google Maps Geo-Coordinates',
-      'Custom Domain',
+      'React 19',
+      'Vite 8',
+      'HTML5 Canvas API',
+      'Custom CSS3 Glassmorphism',
+      'Google Fonts (Metamorphous & Inter)',
+      'Intersection Observer API',
+      'Vercel',
+      'GitHub Actions',
     ],
-    demoUrl: 'https://surabayaink.web.id/',
+    demoUrl: 'https://riyep.com/',
     repoUrl: null,
   },
   {
     id: 5,
-    title: 'Riyep POS – Sistem Kasir & Manajemen Penjualan Kafe Modern (Full-Stack POS Application)',
-    desc: 'Sistem POS full-stack kafe & resto dengan fast-checkout, manajemen meja, kalkulasi split bill & diskon, dan laporan omzet real-time.',
-    about: 'Riyep POS adalah solusi perangkat lunak Point of Sale (POS) modern yang dirancang untuk mengoptimalkan operasional harian kafe, kedai kopi, dan restoran. Dibangun dengan fondasi full-stack menggunakan Laravel, React, dan basis data lokal MySQL, sistem ini menghadirkan pengalaman transaksi kasir cepat (fast-checkout), manajemen pesanan meja (Dine In & Take Away), fleksibilitas metode pembayaran (Tunai, QRIS, Kartu, Split Bill), pemantauan stok bahan/menu secara real-time, hingga rekapitulasi laporan omzet dan arus kas otomatis.',
+    title: "D'Semarang POS – Sistem Kasir & Manajemen Kafe Berbasis Web dengan Multi-Metode Pembayaran",
+    category: 'POS System',
+    categoryGroup: 'erp',
+    accent: '#fb923c',
+    desc: 'Aplikasi kasir web modern untuk kafe & resto dengan checkout kilat, pembayaran multi-metode (QRIS, Tunai, Kartu, Split Bill), dan cetak struk otomatis.',
+    about: "D'Semarang POS adalah aplikasi kasir (Point-of-Sale) berbasis web modern yang dirancang khusus untuk operasional kafe, bistro, dan restoran. Aplikasi ini mempercepat proses pemesanan dengan antarmuka layar sentuh yang intuitif, pencatatan transaksi real-time, fleksibilitas pembayaran (QRIS, Kartu Debit/Kredit, Tunai, hingga Split Bill / pisah tagihan), dan pencetakan struk digital maupun termal otomatis.",
     images: [getImg('project_5a'), getImg('project_5b'), getImg('project_5c')],
     features: [
-      'Katalog Kasir Cepat & Indikator Stok Real-Time: Grid visual intuitif dengan pencarian instan, filter kategori (Coffee, Artisan Tea, Bread, Food, Dessert), serta badge ketersediaan stok (Sisa Stok).',
-      'Order Management & Kalkulator Diskon: Pemilihan jenis layanan (Dine In / Take Away), penerapan potongan diskon cepat (0% – 20%), serta kalkulasi otomatis pajak (PPN 10%) dan subtotal.',
-      'Multi-Payment Gateway & Split Bill: Fleksibilitas transaksi tunai dengan tombol uang pas dan pecahan nominal cepat, pembayaran digital QRIS & kartu debit, hitung kembalian otomatis, serta opsi pembayaran terpisah (split payment).',
-      'Dashboard Laporan Penjualan & Jurnal Kas: Modal ringkasan finansial harian mencakup total omzet bersih, jumlah transaksi, total item terjual, persentase metode bayar, dan pencatatan riwayat struk transaksi secara detail.',
-      'Arsitektur Database Lokal (MySQL) & API Laravel: Dukungan basis data lokal untuk transaksi kasir yang stabil, cepat, dan aman, siap disinkronisasikan ke backend Laravel.',
-      'Desain Dark Mode Responsif (Multi-Device): Antarmuka modern yang nyaman di mata kasir dan fleksibel dioperasikan melalui layar monitor POS, tablet meja, maupun smartphone pelayan.',
+      'Antarmuka Kasir Cepat & Intuitif: Tata letak grid menu dengan filter kategori (Makanan, Minuman, Camilan, Signature) dan pencarian instan.',
+      'Sistem Keranjang & Modifikasi Pesanan: Tambah/kurang kuantitas, catatan khusus per menu (misal: less sugar, no ice), dan kalkulasi subtotal otomatis.',
+      'Multi-Payment Gateway Support: Pilihan metode pembayaran lengkap meliputi QRIS dinamis, Uang Tunai (dengan kalkulator kembalian otomatis), Kartu EDC, dan Split Bill.',
+      'Penerbitan Struk Digital & Cetak Otomatis: Pratinjau struk transaksi rapi dengan nomor pesanan unik, rincian item, pajak, dan stempel waktu.',
+      'Manajemen Stok Real-Time: Pengurangan otomatis stok bahan/menu setiap kali transaksi berhasil diselesaikan.',
     ],
     tech: [
-      'Laravel (PHP)',
-      'RESTful API',
-      'React',
-      'JavaScript (ES6+)',
+      'React.js',
       'Vite',
-      'MySQL',
-      'Custom Dark Theme',
-      'CSS Custom Properties',
-      'Outfit & Inter Typography',
-      'React Hooks & State Management',
-      'Export Laporan Transaksi',
-      'QRIS Generator Ready',
+      'Tailwind CSS',
+      'Lucide React Icons',
+      'Web Print API',
+      'LocalStorage Persistent State',
+      'Vercel',
     ],
-    demoUrl: 'https://riyep-pos-demo.vercel.app/',
-    repoUrl: 'https://github.com/Riyep/POS-Demo',
+    demoUrl: 'https://d-semarang-pos.vercel.app/',
+    repoUrl: 'https://github.com/Riyep/d-semarang-pos',
   },
   {
     id: 6,
-    title: 'Infrastruktur Jaringan Multi-Branch 3 Cabang (MikroTik RouterOS) & Sentralisasi Data Center Synology NAS',
-    desc: 'Implementasi arsitektur jaringan enterprise 3 kantor cabang ke HQ via Encrypted Site-to-Site VPN, VLAN Ruijie, dan storage terpusat Synology NAS.',
-    about: 'Perancangan dan implementasi arsitektur jaringan enterprise multi-lokasi yang menghubungkan 3 kantor cabang (Branch Offices) ke Data Center kantor pusat (HQ) menggunakan MikroTik RouterOS melalui jalur Site-to-Site Encrypted VPN. Sistem ini mengintegrasikan Ruijie Managed Switch untuk segmentasi Layer 2 berbasis VLAN, sentralisasi data kerja kolaboratif dengan Synology NAS, server domain Windows Server, isolasi jaringan kamera Hikvision NVR, serta pembagian skema subnetting IP modular guna menjamin keamanan, efisiensi bandwidth, dan keandalan operasional bisnis.',
+    title: 'Infrastruktur Jaringan Terintegrasi & Server Multi-Cabang – PT Saranabhakti Timur',
+    category: 'Network Infra',
+    categoryGroup: 'network',
+    accent: '#f472b6',
+    desc: 'Arsitektur jaringan enterprise multi-cabang dengan MikroTik Site-to-Site Encrypted VPN, VLAN segmentasi, sentralisasi NAS Synology, dan monitoring NOC.',
+    about: 'Proyek perancangan, instalasi, dan pemeliharaan infrastruktur jaringan dan server berskala enterprise untuk PT Saranabhakti Timur, perusahaan logistik dan distribusi dengan kebutuhan interkoneksi antar-cabang yang aman dan berkecepatan tinggi. Mencakup implementasi VPN terenkripsi, segmentasi VLAN modular, sentralisasi file server NAS, keamanan firewall, dan pemantauan perangkat NOC jarak jauh.',
     images: [getImg('project_6a'), getImg('project_6b'), getImg('project_6c')],
     features: [
-      'Site-to-Site Encrypted VPN (3 Cabang Interconnect): Terowongan VPN aman antar-cabang dengan fitur auto-reconnect dan enkripsi kuat untuk akses langsung ke server lokal dan sistem data center pusat.',
-      'Segmentasi VLAN & Keamanan L2 (Ruijie Managed Switch): Pembagian zona traffic terisolasi (Management, Server, AP, CCTV, Client LAN, dan Tamu/WiFi) untuk mencegah kebocoran data dan membatasi broadcast domain.',
-      'Sentralisasi Data Center & Storage (Synology NAS): Penyimpanan terpusat berkecepatan tinggi dengan proteksi RAID, hak akses berbasis divisi, dan sinkronisasi data antar-cabang secara real-time.',
-      'Jaringan Khusus Surveillance (Hikvision NVR): Penempatan sistem NVR dan kamera IP pada subnet terisolasi (10.10.10.x) agar beban video streaming tidak mengganggu latensi jaringan kerja perkantoran.',
-      'Skema Pengalamatan IP Terstruktur: Windows Server (10.1.1.0/24), Switch Management (172.16.0.0/24), AP Infrastructure (172.17.1.0/24), Hikvision NVR (10.10.10.0/24), Client LAN (192.168.11.0/24), Client WiFi (191.168.12.0/24).',
-      'Mobile Network Operations (NOC Monitoring): Pemantauan visual jarak jauh melalui MikroTik RouterOS Mobile dan Ruijie Cloud untuk deteksi dini utilisasi bandwidth dan link health.',
+      'Site-to-Site Encrypted VPN: Menghubungkan jaringan kantor pusat dan kantor cabang secara aman melalui terowongan VPN terenkripsi (IPsec/WireGuard) berbasis router MikroTik.',
+      'VLAN Segmentation (802.1Q): Pemisahan lalu lintas data menjadi beberapa segmen independen (Manajemen, Operasional, Staff, Tamu/Guest WiFi) menggunakan managed switch Ruijie untuk mitigasi serangan jaringan.',
+      'Penyimpanan Terpusat Synology NAS: Penyediaan file server terpusat dengan konfigurasi RAID untuk cadangan data otomatis, sinkronisasi file antar-divisi, dan pembatasan hak akses berbasis folder.',
+      'Pengalamatan IP Modular (Subnetting CIDR): Desain skema IP address yang terstruktur dan scalable untuk ratusan perangkat PC, laptop, printer jaringan, handheld scanner, dan kamera CCTV.',
+      'Monitoring Jaringan & NOC: Pemantauan ketersediaan link internet dan kesehatan router secara berkala menggunakan Winbox dan dashboard monitoring berbasis web.',
     ],
     tech: [
-      'MikroTik RouterOS',
-      'Winbox',
-      'WireGuard / IPsec Site-to-Site VPN',
-      'Firewall Mangle / NAT / QoS',
-      'Ruijie Managed Switch (VLAN 802.1Q, Trunking, RSTP)',
-      'Synology NAS (RAID Storage Pool, SMB/NFS)',
-      'Windows Server (Active Directory, DNS/DHCP)',
-      'Ruijie Cloud APs',
-      'Hikvision NVR & IP Cameras',
-      'IPv4 CIDR Subnetting',
+      'MikroTik RouterOS (RB4011 / CCR Series)',
+      'Ruijie Reyee Managed PoE Switches',
+      'Synology DiskStation NAS (DSM)',
+      'WireGuard / IPsec VPN Protocol',
+      'VLAN 802.1Q Architecture',
+      'Hikvision NVR & IP Surveillance',
+      'Winbox Management Utility',
     ],
     demoUrl: null,
     repoUrl: null,
-    note: 'Infrastruktur Produksi Riil (Enterprise Deployment)',
+    note: 'Infrastruktur Produksi Enterprise (Internal PT Saranabhakti Timur)',
   },
   {
     id: 7,
-    title: 'Bot Pembayaran Telegram QRIS Otomatis – Sistem Akses Grup VIP & Membership 24/7',
-    desc: 'Bot Telegram asynchronous untuk otomasi pembayaran QRIS dinamis, verifikasi instan, dan penerbitan single-use invite link grup VIP.',
-    about: 'Bot Telegram cerdas berbasis asynchronous yang dirancang untuk mengotomatisasi proses monetisasi komunitas berbayar dan grup privat secara penuh tanpa campur tangan admin manual. Pengguna cukup memilih durasi paket langganan, memindai kode QRIS dinamis yang dibuat otomatis, dan secara instan menerima tautan masuk grup privat yang hanya dapat digunakan 1 kali (single-use invite link) demi menjamin keamanan eksklusivitas keanggotaan.',
+    title: 'Automated Telegram Bot for Dynamic QRIS Subscription & Single-Use VIP Group Access',
+    category: 'Telegram Bot',
+    categoryGroup: 'bot',
+    accent: '#facc15',
+    desc: 'Bot Telegram otomasi pembayaran QRIS dinamis real-time, verifikasi webhook instan, dan penerbitan tautan undangan grup VIP 1x pakai (anti-leak).',
+    about: 'Sistem otomasi berbasis bot Telegram yang dirancang untuk mengelola transaksi langganan keanggotaan grup VIP secara penuh tanpa intervensi manual manusia. Mengintegrasikan gateway pembayaran QRIS dinamis secara real-time, verifikasi otomatis keberhasilan transfer, penyimpanan riwayat transaksi ke database MySQL, dan penerbitan tautan undangan sekali pakai (single-use invite link) untuk mencegah kebocoran akses grup.',
     images: [getImg('project_7a'), getImg('project_7b'), getImg('project_7c'), getImg('project_7d')],
     features: [
       'Alur Transaksi Otomatis (/start & Interactive Buttons): Navigasi cepat dan ramah pengguna melalui inline keyboard Telegram untuk pemilihan paket langganan (Bulanan, Multi-Bulan, maupun Akses Seumur Hidup).',
@@ -213,6 +225,9 @@ const projects = [
   {
     id: 8,
     title: 'Circle Care – Sistem Helpdesk & Manajemen Tiket Kendala Antar-Departemen Berbasis Laravel',
+    category: 'Mini ERP',
+    categoryGroup: ['web', 'erp'],
+    accent: '#60a5fa',
     desc: 'Aplikasi internal IT helpdesk & ticketing kendala antar-divisi dengan routing departemen, notifikasi email otomatis, dan ekspor laporan CSV.',
     about: 'Circle Care adalah aplikasi web Internal IT Helpdesk & Issue Ticketing Management yang dirancang untuk merampingkan alur pelaporan kendala teknis dan operasional antar-divisi di lingkungan perusahaan. Dibangun dengan framework Laravel dan basis data MySQL, platform ini memfasilitasi pelaporan keluhan secara terstruktur, kolaborasi penanganan masalah melalui user tagging, diskusi interaktif, notifikasi email otomatis saat tiket dibuka maupun ditutup, serta rekapitulasi laporan kendala yang dapat diunduh dalam format CSV.',
     images: [getImg('project_8a'), getImg('project_8b'), getImg('project_8c')],
@@ -238,6 +253,36 @@ const projects = [
     demoUrl: null,
     repoUrl: null,
     note: 'Sistem Internal Perusahaan (Private Enterprise App)',
+  },
+  {
+    id: 9,
+    title: 'Bengkel SpareParts – Inventory & Multi-Warehouse Management System',
+    category: 'Inventory ERP',
+    categoryGroup: 'erp',
+    accent: '#10b981',
+    desc: 'Sistem manajemen inventaris dan mini ERP suku cadang otomotif berbasis web dengan multi-gudang, pemetaan rak fisik (bin racking), dan mesin pencari kompatibilitas motor.',
+    about: 'Bengkel SpareParts adalah sistem manajemen inventaris dan mini ERP suku cadang otomotif berbasis web yang dirancang khusus untuk toko onderdil, distributor, dan jaringan bengkel modern. Mengintegrasikan pencatatan multi-gudang, pemetaan lokasi rak fisik, mesin pencari kompatibilitas sepeda motor, pelacakan retur barang (RMA), hingga otomatisasi ekspor laporan operasional format PDF dan Excel.',
+    images: [getImg('project_9a'), getImg('project_9b'), getImg('project_9c')],
+    features: [
+      'Real-Time Inventory & Valuation: Pemantauan langsung total valuasi aset gudang (Rp 102.2M+), kontrol batas minimum stok kritis, dan grafik tren keluar-masuk barang bulanan.',
+      'Master Data & Multi-Tier Pricing: Pengelolaan kode SKU, Part Number pabrikan, barcode scanner ready, serta pengaturan harga modal, grosir, dan eceran.',
+      'Multi-Warehouse & Bin Racking: Manajemen stok terdistribusi di 5 gudang cabang regional dengan pemetaan rak fisik spesifik (Rak A-01) dan modul mutasi transfer barang.',
+      'Motorcycle Compatibility Finder: Fitur pencarian presisi kecocokan suku cadang berdasarkan brand motor, varian model, jenis transmisi (Matic/Bebek/Sport), dan tahun perakitan.',
+      'Return & RMA Management: Alur klaim barang rusak atau salah kirim dengan kode unik retur, dokumentasi kendala fisik, dan status approval bertingkat.',
+      'Automated Report Generator: Ekspor instan rekapitulasi ringkasan stok, katalog suku cadang, dan histori retur ke format dokumen PDF dan spreadsheet Excel (.xlsx).',
+    ],
+    tech: [
+      'React 18',
+      'Vite 6',
+      'React Router DOM v6',
+      'Tailwind CSS',
+      'Radix UI Primitives',
+      'Lucide Icons',
+      'Recharts',
+      'Vercel Deployment',
+    ],
+    demoUrl: 'https://riyep-ims-demo.vercel.app',
+    repoUrl: null,
   },
 ];
 
@@ -316,31 +361,10 @@ function ImageSlider({ images }) {
   );
 }
 
-const cardAccents = [
-  '#60a5fa',
-  '#a78bfa',
-  '#22d3ee',
-  '#34d399',
-  '#fb923c',
-  '#f472b6',
-  '#facc15',
-  '#60a5fa',
-];
-
-const cardCategories = [
-  'Web App',
-  'Web App',
-  'Web App',
-  'Web App',
-  'POS System',
-  'Network Infra',
-  'Telegram Bot',
-  'Web App',
-];
-
 export default function Projects() {
   const ref = useScrollReveal();
   const [selectedProject, setSelectedProject] = useState(null);
+  const [activeTab, setActiveTab] = useState('all');
 
   // Close modal on Escape key
   useEffect(() => {
@@ -351,35 +375,63 @@ export default function Projects() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  const matchCategory = (p, catId) => {
+    if (catId === 'all') return true;
+    return Array.isArray(p.categoryGroup)
+      ? p.categoryGroup.includes(catId)
+      : p.categoryGroup === catId;
+  };
+
+  const filteredProjects = projects.filter((p) => matchCategory(p, activeTab));
+
   return (
     <section id="projects">
       <div className="container">
         <div ref={ref} className="fade-in">
           <div className="section-divider" />
           <h2 className="section-title">Projects</h2>
+          <p className="section-subtitle">
+            Koleksi karya rekayasa perangkat lunak, sistem kasir POS, mini ERP operasional, otomasi bot, dan infrastruktur jaringan.
+          </p>
+
+          {/* Interactive Category Filter Tabs */}
+          <div className="project-category-tabs">
+            {filterCategories.map((cat) => {
+              const count = projects.filter((p) => matchCategory(p, cat.id)).length;
+              return (
+                <button
+                  key={cat.id}
+                  type="button"
+                  className={`project-tab-btn ${activeTab === cat.id ? 'active' : ''}`}
+                  onClick={() => setActiveTab(cat.id)}
+                >
+                  <span>{cat.label}</span>
+                  <span className="project-tab-count">{count}</span>
+                </button>
+              );
+            })}
+          </div>
 
           <div className="projects-grid">
-            {projects.map((project, idx) => {
-              const accent = cardAccents[idx] || '#60a5fa';
-              const category = cardCategories[idx] || 'Project';
+            {filteredProjects.map((project) => {
               const visibleTech = project.tech.slice(0, 4);
               const extraTech = project.tech.length - visibleTech.length;
               return (
                 <div
                   key={project.id}
                   className="project-card clickable-card"
-                  style={{ '--card-accent': accent }}
+                  style={{ '--card-accent': project.accent }}
                   onClick={() => setSelectedProject(project)}
                 >
                   <div
                     className="glass-card"
-                    style={{ borderTop: `2px solid ${accent}` }}
+                    style={{ borderTop: `2px solid ${project.accent}` }}
                   >
                     {/* Image slider with overlaid badges */}
                     <div className="project-slider-wrap">
                       <ImageSlider images={project.images} />
-                      <span className="project-num">{String(idx + 1).padStart(2, '0')}</span>
-                      <span className="project-tag">{category}</span>
+                      <span className="project-num">{String(project.id).padStart(2, '0')}</span>
+                      <span className="project-tag">{project.category}</span>
                     </div>
 
                     <div className="project-info">
@@ -406,10 +458,10 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Detail Store Modal Overlay */}
+      {/* Detail Store Modal Overlay with Top-Center Thumbnail */}
       {selectedProject && (
         <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
-          <div className="modal-container" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-container modal-top-center-container" onClick={(e) => e.stopPropagation()}>
             <button
               type="button"
               className="modal-close"
@@ -422,74 +474,90 @@ export default function Projects() {
               </svg>
             </button>
 
-            <div className="modal-grid">
-              <div className="modal-media">
-                <ImageSlider images={selectedProject.images} />
+            {/* 1. TOP CENTER Thumbnail Slider */}
+            <div className="modal-media-top">
+              <ImageSlider images={selectedProject.images} />
+            </div>
+
+            {/* 2. Project Details Content */}
+            <div className="modal-details">
+              <div className="modal-meta-row">
+                <span
+                  className="modal-badge-category"
+                  style={{
+                    color: selectedProject.accent,
+                    borderColor: `${selectedProject.accent}55`,
+                    background: `${selectedProject.accent}15`,
+                  }}
+                >
+                  {selectedProject.category}
+                </span>
+                <span className="modal-badge-id">
+                  Project {String(selectedProject.id).padStart(2, '0')}
+                </span>
               </div>
 
-              <div className="modal-details">
-                <h3 className="modal-title">{selectedProject.title}</h3>
-                <p className="modal-tagline">{selectedProject.desc}</p>
+              <h3 className="modal-title">{selectedProject.title}</h3>
+              <p className="modal-tagline">{selectedProject.desc}</p>
 
-                <div className="modal-divider" />
+              <div className="modal-divider" />
 
-                <h4 className="modal-section-title">About Project</h4>
-                <p className="modal-description">{selectedProject.about}</p>
+              <h4 className="modal-section-title">About Project</h4>
+              <p className="modal-description">{selectedProject.about}</p>
 
-                <h4 className="modal-section-title">Key Features</h4>
-                <ul className="modal-features-list">
-                  {selectedProject.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
+              <h4 className="modal-section-title">Key Features</h4>
+              <ul className="modal-features-list">
+                {selectedProject.features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
 
-                <h4 className="modal-section-title">Tech Stack</h4>
-                <div className="modal-tech-tags">
-                  {selectedProject.tech.map((tag) => (
-                    <span key={tag} className="skill-pill tag-pill">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <h4 className="modal-section-title">Tech Stack</h4>
+              <div className="modal-tech-tags">
+                {selectedProject.tech.map((tag) => (
+                  <span key={tag} className="skill-pill tag-pill">
+                    {tag}
+                  </span>
+                ))}
+              </div>
 
-                <div className="modal-actions">
-                  {selectedProject.demoUrl && (
-                    <a
-                      href={selectedProject.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="modal-btn primary-btn"
-                    >
-                      Live Demo
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                        <polyline points="15 3 21 3 21 9" />
-                        <line x1="10" y1="14" x2="21" y2="3" />
-                      </svg>
-                    </a>
-                  )}
+              <div className="modal-actions">
+                {selectedProject.demoUrl && (
+                  <a
+                    href={selectedProject.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="modal-btn primary-btn"
+                  >
+                    Live Demo
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </a>
+                )}
 
-                  {selectedProject.repoUrl && (
-                    <a
-                      href={selectedProject.repoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="modal-btn secondary-btn"
-                    >
-                      Source Code
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                      </svg>
-                    </a>
-                  )}
+                {selectedProject.repoUrl && (
+                  <a
+                    href={selectedProject.repoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="modal-btn secondary-btn"
+                  >
+                    Source Code
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                  </a>
+                )}
 
-                  {!selectedProject.demoUrl && !selectedProject.repoUrl && selectedProject.note && (
-                    <span className="modal-private-badge">
-                      <span className="badge-dot" />
-                      {selectedProject.note}
-                    </span>
-                  )}
-                </div>
+                {!selectedProject.demoUrl && !selectedProject.repoUrl && selectedProject.note && (
+                  <span className="modal-private-badge">
+                    <span className="badge-dot" />
+                    {selectedProject.note}
+                  </span>
+                )}
               </div>
             </div>
           </div>
