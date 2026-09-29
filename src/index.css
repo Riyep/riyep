@@ -1567,6 +1567,13 @@ section {
   .projects-grid { grid-template-columns: 1fr; gap: 20px; }
   .contact-showcase { padding: 64px 24px 36px; }
   .contact-card { flex: 1 1 130px; max-width: 150px; }
+
+  /* Ensure animated sections are immediately visible and never stuck invisible on mobile */
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: opacity 0.3s ease-out !important;
+  }
 }
 
 @media (max-width: 480px) {
