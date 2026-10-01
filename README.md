@@ -1,16 +1,37 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+<!-- Header Banner with Metamorphous Font & Aurora Glow -->
+<img src="./header.svg" alt="RIYEP-DEV Header Banner" width="100%" />
 
-Currently, two official plugins are available:
+<br/><br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<!-- Dynamic Typing SVG (Fira Code) -->
+<a href="https://www.riyep.com">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=2800&pause=1000&color=60A5FA&center=true&vCenter=true&width=550&lines=Building+modern+web+apps+%26+POS+systems;Configuring+MikroTik%2C+VPN+%26+Linux+servers;Telegram+automation+%26+system+integrations;Visit+portfolio+at+riyep.com" alt="Typing SVG" />
+</a>
 
-## React Compiler
+<br/>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<!-- Quick Links / Badges -->
+<a href="https://www.riyep.com">
+  <img src="https://img.shields.io/badge/WEBSITE-riyep.com-60a5fa?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=050510" alt="Website" />
+</a>
+<a href="https://wa.me/6289677602300">
+  <img src="https://img.shields.io/badge/WHATSAPP-%2B62_8967_7602_300-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=050510" alt="WhatsApp" />
+</a>
+<a href="mailto:riyepdev@gmail.com">
+  <img src="https://img.shields.io/badge/EMAIL-riyepdev%40gmail.com-a78bfa?style=for-the-badge&logo=gmail&logoColor=white&labelColor=050510" alt="Email" />
+</a>
 
-## Expanding the Oxlint configuration
+</div>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+<br/>
+
+### 🌌 About Me
+
+```yaml
+Name: Rio Marcellino (Riyep)
+Role: Software Engineer & IT Infrastructure
+Company: PT Saranabhakti Timur
+Location: Surabaya, Indonesia
+Focus: Web Apps, POS Systems, Mikrotik/VPN, Server Virtualization
