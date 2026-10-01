@@ -9,11 +9,11 @@
     <a href="mailto:riyepdev@gmail.com"><img src="https://img.shields.io/badge/EMAIL-riyepdev%40gmail.com-a78bfa?style=for-the-badge&logo=gmail&logoColor=white&labelColor=050510" alt="Email" /></a>
   </p>
 </div>
-### 🌌 About Me
+🌌 About Me
 
 ```yaml
 Name: Rio Marcellino (Riyep)
 Role: Software Engineer & IT Infrastructure
-Company: PT Saranabhakti Timur
+Company: PT Saranabhakti Timur (Since 2022)
 Location: Surabaya, Indonesia
 Focus: Web Apps, POS & ERP Systems, Mikrotik/VPN, VPS & Server Virtualization
