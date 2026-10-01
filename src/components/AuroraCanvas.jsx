@@ -90,6 +90,8 @@ class AuroraOrb {
 
 export default function AuroraCanvas({ count = 6 }) {
   const canvasRef = useRef(null);
+  const scrollYRef = useRef(0);
+  const rafScrollRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -133,6 +135,28 @@ export default function AuroraCanvas({ count = 6 }) {
       window.removeEventListener('resize', resize);
     };
   }, [count]);
+
+  // Parallax scroll effect — aurora moves more than stars (deeper layer feel)
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const onScroll = () => {
+      scrollYRef.current = window.scrollY;
+      if (rafScrollRef.current) return;
+      rafScrollRef.current = requestAnimationFrame(() => {
+        // Aurora moves ~2x faster than stars for parallax depth
+        canvas.style.transform = `translateY(${scrollYRef.current * 0.12}px)`;
+        rafScrollRef.current = null;
+      });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (rafScrollRef.current) cancelAnimationFrame(rafScrollRef.current);
+    };
+  }, []);
 
   return (
     <canvas

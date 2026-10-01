@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 
 export default function StarsCanvas({ count = 180 }) {
   const canvasRef = useRef(null);
+  const scrollYRef = useRef(0);
+  const rafScrollRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -104,6 +106,28 @@ export default function StarsCanvas({ count = 180 }) {
       cancelAnimationFrame(animId);
     };
   }, [count]);
+
+  // Parallax scroll effect — runs independently of animation loop
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const onScroll = () => {
+      scrollYRef.current = window.scrollY;
+      if (rafScrollRef.current) return;
+      rafScrollRef.current = requestAnimationFrame(() => {
+        // Stars move slightly with scroll (mild depth layer)
+        canvas.style.transform = `translateY(${scrollYRef.current * 0.06}px)`;
+        rafScrollRef.current = null;
+      });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (rafScrollRef.current) cancelAnimationFrame(rafScrollRef.current);
+    };
+  }, []);
 
   return (
     <canvas
