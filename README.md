@@ -9,6 +9,19 @@
     <a href="mailto:riyepdev@gmail.com"><img src="https://img.shields.io/badge/EMAIL-riyepdev%40gmail.com-a78bfa?style=for-the-badge&logo=gmail&logoColor=white&labelColor=050510" alt="Email" /></a>
   </p>
 </div>
+
+### 🛠️ Tech Stack & Tools
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,js,vite,tailwind,html,css,nodejs,python,php,mysql,linux,windows,git,docker&theme=dark" alt="Tech Stack Icons" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/MikroTik-RouterOS-000000?style=flat-square&logo=mikrotik&logoColor=white" alt="MikroTik" />
+  <img src="https://img.shields.io/badge/Virtualization-Proxmox%20%7C%20Hyper--V-E57000?style=flat-square&logo=proxmox&logoColor=white" alt="Proxmox" />
+  <img src="https://img.shields.io/badge/VPN-WireGuard%20%7C%20OpenVPN-88171A?style=flat-square&logo=wireguard&logoColor=white" alt="VPN" />
+</p>
+
 🌌 About Me
 
 ```yaml
