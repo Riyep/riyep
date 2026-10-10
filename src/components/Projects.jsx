@@ -283,6 +283,35 @@ const projects = [
     demoUrl: 'https://riyep-ims-demo.vercel.app',
     repoUrl: null,
   },
+  {
+    id: 10,
+    title: 'AFA JAYA TEHNIK – Modern Company Profile & Service Booking Platform',
+    category: 'Web App',
+    categoryGroup: 'web',
+    accent: '#0284c7',
+    desc: 'Platform web company profile & booking servis AC Surabaya dengan katalog harga transparan per PK, 1-click WhatsApp order, dan modul FAQ teknis.',
+    about: 'AFA JAYA TEHNIK adalah platform web company profile dan pemesanan jasa reparasi/perawatan Air Conditioner (AC) profesional untuk wilayah Surabaya dan sekitarnya. Dirancang dengan tampilan modern bernuansa sejuk, transparansi katalog harga interaktif per kategori layanan, integrasi pemesanan langsung ke WhatsApp dengan format pesan otomatis, edukasi pelanggan melalui modul FAQ teknis, serta verifikasi lokasi bisnis terintegrasi Google Maps.',
+    images: [getImg('project_10a'), getImg('project_10b'), getImg('project_10c')],
+    features: [
+      'Transparent Service Pricing Catalog: Navigasi tab interaktif untuk 7 kategori layanan utama (Cuci AC, Pasang Baru, Bongkar Pasang, Tambah Freon R22/32/410, Isi Freon Penuh, Bongkar AC, dan Penggantian Kapasitor) lengkap dengan rincian kapasitas PK.',
+      'Direct 1-Click WhatsApp Booking: Integrasi pemesanan instan per item layanan yang secara otomatis menyusun draf pesan WhatsApp berisi jenis pekerjaan, estimasi biaya, dan alamat pelanggan.',
+      'Service Highlights & Equipment Standards: Penjelasan keunggulan layanan, penggunaan mesin vakum modern untuk instalasi pipa steril, dan jaminan garansi pengerjaan rapi.',
+      'Interactive Technical FAQ Module: 10 tanya jawab teknis komprehensif seputar siklus pencucian AC, tanda freon habis, fungsi kapasitor, hingga penanganan berbagai merek AC (Daikin, Panasonic, Sharp, Gree, dll).',
+      'Verified Business Location & Hours: Embed Google Maps presisi di kawasan Tambaksari, Surabaya serta informasi jam operasional harian (08.00 – 18.00 WIB).',
+      'Interactive Visual Polish: Efek partikel hembusan angin dingin (Wind Particles Canvas) dan tombol floating WhatsApp chat yang selalu siap diakses di setiap halaman.',
+    ],
+    tech: [
+      'Next.js 16 (App Router)',
+      'React 19',
+      'Tailwind CSS v4',
+      'TypeScript 5',
+      'Lucide React',
+      'Wind Particles Canvas',
+      'Vercel Deployment',
+    ],
+    demoUrl: 'https://afa-jaya-tehnik.vercel.app/',
+    repoUrl: 'https://github.com/Riyep/afa-jaya-tehnik',
+  },
 ];
 
 function ImageSlider({ images }) {

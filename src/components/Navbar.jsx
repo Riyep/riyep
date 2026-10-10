@@ -19,16 +19,38 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleClick = () => setOpen(false);
+  const handleNavClick = (e, targetSelector) => {
+    e.preventDefault();
+    setOpen(false);
+    const targetEl = document.querySelector(targetSelector);
+    if (targetEl) {
+      targetEl.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  };
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <a href="#hero" className="nav-logo"><img src="/logo.svg" alt="RYP Logo" className="nav-logo-img" /></a>
+        <a
+          href="#hero"
+          className="nav-logo"
+          onClick={(e) => handleNavClick(e, '#hero')}
+        >
+          <img src="/logo.svg" alt="RYP Logo" className="nav-logo-img" />
+        </a>
 
         <div className="nav-links">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href}>{item.label}</a>
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
+            >
+              {item.label}
+            </a>
           ))}
         </div>
 
@@ -45,7 +67,11 @@ export default function Navbar() {
 
       <div className={`nav-mobile ${open ? 'open' : ''}`}>
         {navItems.map((item) => (
-          <a key={item.href} href={item.href} onClick={handleClick}>
+          <a
+            key={item.href}
+            href={item.href}
+            onClick={(e) => handleNavClick(e, item.href)}
+          >
             {item.label}
           </a>
         ))}

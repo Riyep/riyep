@@ -15,6 +15,10 @@ export default function App() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
+    // Clean any hash in URL on initial mount
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
     // Small delay to trigger entrance animation
     const t = setTimeout(() => setLoaded(true), 100);
     return () => clearTimeout(t);
