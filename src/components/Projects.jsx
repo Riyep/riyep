@@ -314,7 +314,7 @@ const projects = [
   },
 ];
 
-function ImageSlider({ images }) {
+function ImageSlider({ images, title = 'Project Preview', priority = false }) {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
@@ -347,9 +347,10 @@ function ImageSlider({ images }) {
         <img
           key={i}
           src={src}
-          alt={`Slide ${i + 1}`}
+          alt={`${title} - Preview Screenshot ${i + 1}`}
           className={i === active ? 'active' : ''}
-          loading="lazy"
+          loading={priority && i === 0 ? 'eager' : 'lazy'}
+          decoding="async"
         />
       ))}
 
@@ -457,7 +458,11 @@ export default function Projects() {
                   >
                     {/* Image slider with overlaid badges */}
                     <div className="project-slider-wrap">
-                      <ImageSlider images={project.images} />
+                      <ImageSlider
+                        images={project.images}
+                        title={project.title}
+                        priority={project.id <= 2}
+                      />
                       <span className="project-num">{String(project.id).padStart(2, '0')}</span>
                       <span className="project-tag">{project.category}</span>
                     </div>
@@ -504,7 +509,11 @@ export default function Projects() {
 
             {/* 1. TOP CENTER Thumbnail Slider */}
             <div className="modal-media-top">
-              <ImageSlider images={selectedProject.images} />
+              <ImageSlider
+                images={selectedProject.images}
+                title={selectedProject.title}
+                priority={true}
+              />
             </div>
 
             {/* 2. Project Details Content */}
