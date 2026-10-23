@@ -4,18 +4,18 @@ const services = [
   {
     id: 'web-dev',
     num: '01',
-    title: 'Website Custom',
-    subtitle: 'Landing Page, Company Profile, Platform Pemesanan',
-    desc: 'Bikin website murah & profesional dengan desain modern, performa tinggi, mobile-friendly, dan terindeks Google. Dari landing page sederhana hingga platform web pemesanan produk yang terintegrasi payment gateway QRIS.',
+    title: 'Website Profesional & Responsive',
+    subtitle: 'Company Profile, Restoran & Cafe, Full Code SEO-Friendly',
+    desc: 'Jasa pembuatan website profesional dan website responsive berbasis di Surabaya, Jawa Timur. Melayani pembuatan website company profile bisnis, website restoran dan cafe, landing page booking, hingga arsitektur full code modern yang SEO friendly dan terintegrasi dengan third-party (Tripay QRIS, WhatsApp API, Google Maps, dan REST API).',
     items: [
-      'Landing Page & Website Portofolio',
       'Website Company Profile & Profil Bisnis',
-      'Platform Pemesanan / Toko Online',
-      'SPA Cepat, Responsif, & SEO-Ready',
+      'Website Restoran, Cafe, & F&B Modern',
+      'Desain Full Code Responsive & SEO Friendly',
+      'Website Terintegrasi dengan Third-Party API',
     ],
     color: '#60a5fa',
     glow: 'rgba(96, 165, 250, 0.15)',
-    waMessage: 'Halo Riyep, saya ingin konsultasi Jasa Pembuatan Website.',
+    waMessage: 'Halo Riyep, saya ingin konsultasi Jasa Pembuatan Website Profesional.',
     icon: (
       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect width="20" height="14" x="2" y="3" rx="2" />
